@@ -8,4 +8,5 @@ class Address
     @state = attributes[:state]
     @zip = attributes[:zip]
   end
+
 end

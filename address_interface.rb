@@ -1,17 +1,25 @@
 require './lib/address_book'
 
+@current_contact = nil
+
 def main_menu
+
+  if Contact.all == []
+    puts "Please add a contact.\n\n\n\n"
+  else
+    puts "Contact List \n\n\n\n"
+    Contact.all.each_with_index do |contact, i|
+      puts "#{(i+1)}. #{contact.name}" #include @phone.length, @email.length, etc
+    end
+    puts "Enter a contact's number to view or modify."
+    choice = gets.chomp
+    #use choice to refer to index
+  end
   puts "Press 'a' to add a contact"
-  puts "Press 'l' to list all contacts"
-  puts "Press 'v' to choose a contact and see all properties"
   puts "Press 'x' to exit"
   choice = gets.chomp
   if choice == 'a'
     add_contact
-  elsif choice == 'l'
-    list_contacts
-  elsif choice == 'v'
-    contact_values
   elsif choice == "x"
     puts "Bye!"
     exit
@@ -22,42 +30,42 @@ def main_menu
 end
 
 def add_contact
-  puts "Enter a name"
-  name = gets.chomp
-  puts "Enter a phone number"
-  phone = gets.chomp
-  puts "Enter an email"
-  email = gets.chomp
-  puts "Enter an address"
-  address = gets.chomp
-  new_contact = Contact.new(name)
-  new_contact.add_phone({phon})
+  puts "Enter the contact's name"
+  contact_name = gets.chomp
+  new_contact = Contact.new(contact_name)
   new_contact.save
-  puts "\n\n"
-  main_menu
+  @current_contact = new_contact
+  puts "Contact #{new_contact.name} created!"
+  contact_view
 end
 
-def list_contacts
-  puts "-----"
-  Contact.all.each do |con|
-    puts con.name
-  end
-  puts "-----"
-  main_menu
-end
-
-def contact_values
-  Contact.all.each do |con|
-    puts con.name
-  end
-  puts "Choose a contact:"
-  contact_chosen = gets.chomp
-  Contact.all.each do |con|
-    if con.name == contact_chosen
-      puts "P:#{con.phone}, E:#{con.email}, A:#{con.address}"
+def contact_view
+  system("clear")
+  puts "#{@current_contact.name}\n"
+  unless @current_contact.address == []
+    @current_contact.address.each do |address|
+      puts "#{address.street}\n#{address.city}, #{address.state} #{address.zip}\n
+      ---------\n"
     end
   end
-  main_menu
+  unless @current_contact.phone == []
+    @current_contact.phone.each do |phone|
+      puts "#{phone.type}: #{phone.phone_number}\n"
+    end
+  end
+  unless @email == []
+    @current_contact.email.each do |email|
+      puts "#{email.type}: #{email.email}\n"
+    end
+  end
+  puts "\n\n"
+  puts "Enter 'a' to add an address to Andrew."
+  puts "Enter 'e' to add an email to Andrew."
+  puts "Enter 'p' to add a phone to Andrew."
+  puts "\n"
+  puts "Enter 'c' to change info"
+  puts "Enter 'd' to delete info"
+
 end
 
 main_menu

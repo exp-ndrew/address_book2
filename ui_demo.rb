@@ -1,26 +1,36 @@
-Contact List
-{main menu}
+╭━━━╮╱╱╭╮╱╱╭╮ \n
+┃╭━╮┃╱╱┃┃╱╱┃┃ \n
+┃┃╱┃┃╭━╯┃╭━╯┃╭━╮╭━━╮╭━━╮╭━━╮
+┃╰━╯┃┃╭╮┃┃╭╮┃┃╭╯┃┃━┫┃━━┫┃━━┫
+┃╭━╮┃┃╰╯┃┃╰╯┃┃┃╱┃┃━┫┣━━┃┣━━┃
+╰╯╱╰╯╰━━╯╰━━╯╰╯╱╰━━╯╰━━╯╰━━╯
+╭━━╮╱╱╱╱╱╱╱╱╱╭╮
+┃╭╮┃╱╱╱╱╱╱╱╱╱┃┃
+┃╰╯╰╮╭━━╮╭━━╮┃┃╭╮
+┃╭━╮┃┃╭╮┃┃╭╮┃┃╰╯╯
+┃╰━╯┃┃╰╯┃┃╰╯┃┃╭╮╮
+╰━━━╯╰━━╯╰━━╯╰╯╰╯
 
 {contact list shows here when there are contacts}
 
-Press 'a' to add a contact
-Press 'x' to exit
+Enter 'a' to add a contact
+Enter 'x' to exit
 
 
 > a
 
-What is the contact's name?
+Enter the contact's name
 
 > Andrew
 
 Contact Andrew created!
 
-Press 'a' to add an address to Andrew.
-Press 'e' to add an email to Andrew.
-Press 'p' to add a phone to Andrew.
+Enter 'a' to add an address to Andrew.
+Enter 'e' to add an email to Andrew.
+Enter 'p' to add a phone to Andrew.
 
-Press 'l' to list your contacts.
-Press 'x' to exit.
+Enter 'l' to list your contacts.
+Enter 'x' to exit.
 
 > a
 
@@ -49,26 +59,71 @@ Andrew
 Portland OR 97215
 
 
-Press 'a' to add an address to Andrew.
-Press 'e' to add an email to Andrew.
-Press 'p' to add a phone to Andrew.
+Enter 'a' to add an address to Andrew.
+Enter 'e' to add an email to Andrew.
+Enter 'p' to add a phone to Andrew.
 
-Press 'c' to change info
-Press 'd' to delete info
+Enter 'c' to change info
+Enter 'd' to delete info
 
-Press 'l' to go back to your contact list.
+Enter 'l' to go back to your contact list.
 
 > e
 
-Add an email to Andrew:
+Add an email to Andrew
+
+Enter the email address:
+
+> a@aw.com
 
 Enter the email type: (work, home, school, etc.)
 
 > work
 
-Enter the email address:
+Added work email to Andrew!
 
-> a@aw
+Andrew
+1234 Main St
+Portland OR 97215
+work: a@aw.com
 
-Added email to Andrew!
+
+Enter 'a' to add an address to Andrew.
+Enter 'e' to add an email to Andrew.
+Enter 'p' to add a phone to Andrew.
+
+Enter 'c' to change info
+Enter 'd' to delete info
+
+Enter 'l' to go back to your contact list.
+
+> l
+
+Contact List
+
+1. Andrew
+
+Enter a contact's number to view or modify.
+Enter 'a' to add a contact
+Enter 'x' to exit
+
+> 1
+
+Andrew
+1234 Main St
+Portland OR 97215
+work: a@aw.com
+
+
+Enter 'a' to add an address to Andrew.
+Enter 'e' to add an email to Andrew.
+Enter 'p' to add a phone to Andrew.
+
+Enter 'c' to change info
+Enter 'd' to delete info
+
+Enter 'l' to go back to your contact list.
+
+> p
+
 
